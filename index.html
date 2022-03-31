@@ -62,7 +62,7 @@
         <section class="hero overlay">
                 <div class="container">
                     <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                    <button class="hero-btn" type="button">Заказать услугу</button>
+                    <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
                 </div>
         </section>
         <!-- Преимущества -->
@@ -116,22 +116,16 @@
                 <ul class="activity-list list">
                     <li class="activity-item">
                         <img class="activity-pic" src="./images/box-1.jpg" alt="Приложение на компьютере" width=370 height="294">
-                        <!-- <div class="activity-action"> -->
-                            <p class="activity-text">Десктопные приложения</p>
-                        <!-- </div> -->
+                        <p class="activity-text">Десктопные приложения</p>                        
                     </li>
                     <li class="activity-item activity-thumb">
                         <img class="activity-pic" src="./images/box-2.jpg" alt="Макеты мобильного приложения на ноутбуке" width=370
                             height="294">
-                        <!-- <div class="activity-action"> -->
-                            <p class="activity-text">Мобильные приложения</p>
-                        <!-- </div>     -->
+                        <p class="activity-text">Мобильные приложения</p>
                     </li>
                     <li class="activity-item">
                         <img class="activity-pic" src="./images/box-3.jpg" alt="Цветовая палитра на планшете" width=370 height="294">
-                        <!-- <div class="activity-action"> -->
-                            <p class="activity-text">Дизайнерские решения</p>
-                        <!-- </div> -->
+                        <p class="activity-text">Дизайнерские решения</p>
                     </li>
                 </ul>
             </div>            
@@ -398,5 +392,16 @@
             </div>
         </div>        
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-btn" data-modal-close>
+                <svg class="close" width="18" height="18">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
