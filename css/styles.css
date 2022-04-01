@@ -189,7 +189,7 @@ ul {
   padding-bottom: 32px;
 
   color: var(--primery-text-color);
-  transition: fill var(--anim);
+  transition: fill var(--anim), color var(--anim);
 }
 
 .header-contacts-link:hover {
