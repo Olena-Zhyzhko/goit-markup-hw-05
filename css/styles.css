@@ -40,6 +40,7 @@ body {
 /* Общие стили */
 .link {
   text-decoration: none;
+  transition: color var(--anim);
 }
 
 .link:hover,
@@ -188,6 +189,7 @@ ul {
   padding-bottom: 32px;
 
   color: var(--primery-text-color);
+  transition: fill var(--anim);
 }
 
 .header-contacts-link:hover {
@@ -252,6 +254,7 @@ ul {
 
   border: 0px;
   border-radius: 4px;
+  transition: background-color var(--anim);
 }
 
 .hero-btn:hover,
@@ -333,7 +336,6 @@ ul {
 }
 
 .activity-text {
-  display: block;
   position: absolute;
   width: 100%;
   height: 70px;
@@ -341,6 +343,7 @@ ul {
   bottom: 0;
   background-color: rgba(47, 48, 58, 0.8);
 
+  display: block;
   padding-top: 27px;
   padding-bottom: 27px;
 
@@ -430,16 +433,18 @@ ul {
   justify-content: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
+  transition: background-color var(--anim);
 }
 
 .social-icon {
   fill: #afb1b8;
+  transition: fill var(--anim);
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
-  border-radius: 50%;
 }
 
 .social-link:hover .social-icon,
@@ -469,10 +474,12 @@ ul {
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: border var(--anim);
 }
 
 .clients-icon {
   fill: #afb1b8;
+  transition: fill var(--anim);
 }
 
 .clients-link:hover,
@@ -551,8 +558,10 @@ address.address {
   justify-content: center;
   width: 44px;
   height: 44px;
+
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color var(--anim);
 }
 
 .footer-social-link:hover,
@@ -640,9 +649,11 @@ address.address {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+
   background-color: var(--secondary-bg-color);
   border: 0px;
   border-radius: 4px;
+  transition: background-color var(--anim), color var(--anim), box-shadow var(--anim);
 }
 .filter-btn:hover,
 .filter-btn:focus {
@@ -685,12 +696,42 @@ address.address {
 .projects-link {
   display: block;
   text-decoration: none;
+  transition: box-shadow var(--anim);
+}
+
+.project-thumb {
+  position: relative;
+  overflow: hidden;
 }
 
 .projects-pic {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.project-discription {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform var(--anim);
+
+  display: block;
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--light-color);
+
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.projects-link:hover .project-discription,
+.projects-link:focus .project-discription {
+  transform: translateY(0%);
 }
 
 .projects-title {
